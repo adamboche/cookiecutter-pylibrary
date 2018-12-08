@@ -1,8 +1,8 @@
 {
-    "full_name": "Ionel Cristian Maries",
-    "email": "contact@ionelmc.ro",
-    "website": "https://blog.ionelmc.ro",
-    "github_username": "ionelmc",
+    "full_name": "Adam Boche",
+    "email": "adam@adamboche.com",
+    "website": "https://www.adamboche.com",
+    "github_username": "adamboche",
     "project_name": "Nameless",
     "repo_name": "python-{{ cookiecutter.project_name|lower|replace(' ','-') }}",
     "package_name": "{{ cookiecutter.project_name|lower|replace(' ','_')|replace('-','_') }}",
@@ -35,10 +35,10 @@
     "test_matrix_separate_coverage": ["no", "yes"],
     "test_runner": ["pytest", "nose"],
     "linter": ["flake8", "pylama"],
-    "command_line_interface": ["plain", "argparse", "click", "no"],
+    "command_line_interface": ["click", "plain", "argparse", "no"],
     "command_line_interface_bin_name": "{{ cookiecutter.distribution_name }}",
     "coveralls": ["no", "yes"],
-    "codecov": ["yes", "no"],
+    "codecov": ["no", "yes"],
     "landscape": ["no", "yes"],
     "scrutinizer": ["no", "yes"],
     "codacy" : ["no", "yes"],
@@ -48,5 +48,5 @@
     "sphinx_doctest": ["no", "yes"],
     "travis": ["yes", "no"],
     "appveyor": ["yes", "no"],
-    "requiresio": ["yes", "no"]
+    "requiresio": ["no", "yes"]
 }
