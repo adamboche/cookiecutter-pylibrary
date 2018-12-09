@@ -132,6 +132,10 @@ def cli():
         subparsers.add_parser(name, help=function.__doc__)
 
     args = parser.parse_args()
+    if args.command_name is None:
+        parser.print_help()
+        sys.exit(2)
+
     function = _register.registered[args.command_name]
     cfg = types.SimpleNamespace()
     cfg.venv_path = args.venv
