@@ -1,1 +1,5 @@
+coverage
+cuvner
+pytest
+tox
 versioneer
