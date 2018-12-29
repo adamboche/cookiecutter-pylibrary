@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 import argparse
 import os
@@ -74,17 +74,18 @@ def lock(cfg):
         ],
         check=True,
     )
-    subprocess.run(
-        [
-            cfg.venv_path / "bin/pip-compile",
-            "--generate-hashes",
-            "--output-file",
-            "dev-requirements.txt",
-            "setup.py",
-            "dev-requirements.in",
-        ],
-        check=True,
-    )
+    if pathlib.Path("dev-requirements.in").exists():
+        subprocess.run(
+            [
+                cfg.venv_path / "bin/pip-compile",
+                "--generate-hashes",
+                "--output-file",
+                "dev-requirements.txt",
+                "setup.py",
+                "dev-requirements.in",
+            ],
+            check=True,
+        )
 
 
 @_register
