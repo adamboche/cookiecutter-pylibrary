@@ -3,3 +3,6 @@ cuvner
 pytest
 tox
 versioneer
+flake8
+pylint
+mypy
