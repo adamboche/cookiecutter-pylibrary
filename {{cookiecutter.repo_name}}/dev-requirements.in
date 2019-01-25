@@ -6,3 +6,4 @@ versioneer
 flake8
 pylint
 mypy
+black
