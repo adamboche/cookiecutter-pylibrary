@@ -35,13 +35,13 @@ parser.add_argument('names', metavar='NAME', nargs=argparse.ZERO_OR_MORE,
                     help="A name of something.")
 
 
-def main(args=None):
+def cli(args=None):
     args = parser.parse_args(args=args)
     print(args.names)
 {%- else %}
 
 
-def main(argv=sys.argv):
+def cli(argv=sys.argv):
     """
     Args:
         argv (list): List of arguments

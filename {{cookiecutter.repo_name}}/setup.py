@@ -153,7 +153,7 @@ setup(
 {%- if cookiecutter.command_line_interface != 'no' %}
     entry_points={
         'console_scripts': [
-            '{{ cookiecutter.command_line_interface_bin_name }} = {{ cookiecutter.package_name }}.cli:main',
+            '{{ cookiecutter.command_line_interface_bin_name }} = {{ cookiecutter.package_name }}.cli:cli',
         ]
     },
 {%- endif %}
