@@ -49,6 +49,9 @@ def read(*names, **kwargs):
         return fh.read()
 
 
+with open("requirements.in") as f:
+    INSTALL_REQUIRES = f.splitlines()
+
 {% if cookiecutter.c_extension_support != 'no' -%}
 # Enable code coverage for C code: we can't use CFLAGS=-coverage in tox.ini, since that may mess with compiling
 # dependencies (e.g. numpy). Therefore we set SETUPPY_CFLAGS=-coverage in tox.ini and copy it to CFLAGS here (after
@@ -134,15 +137,9 @@ setup(
     keywords=[
         # eg: 'keyword1', 'keyword2', 'keyword3',
     ],
-    install_requires=[
-{%- if cookiecutter.command_line_interface == 'click' %}
-        'click',
-{%- endif %}
-{%- if cookiecutter.c_extension_support == 'cffi' %}
-        'cffi>=1.0.0',
-{%- endif %}
+    install_requires=INSTALL_REQUIRES
         # eg: 'aspectlib==1.1.1', 'six>=1.7',
-    ],
+    ,
     extras_require={
         # eg:
         #   'rst': ['docutils>=0.11'],

@@ -24,7 +24,11 @@ _register = _Registry()
 @_register
 def clean(cfg):
     """Remove extraneous files."""
-    paths = [cfg.venv_path, ".coverage"] + list(pathlib.Path().glob(".coverage.*"))
+    paths = (
+        [cfg.venv_path, ".coverage"]
+        + list(pathlib.Path().glob(".coverage.*"))
+        + ["dist"]
+    )
 
     for path in paths:
         try:
@@ -40,7 +44,8 @@ def init(cfg):
     subprocess.run(
         ["virtualenv", "--python", sys.executable, cfg.venv_path], check=True
     )
-    lock(cfg)
+    if not pathlib.Path("requirements.txt").exists():
+        raise FileNotFoundError("Run `lock` first, to create requirements.txt.")
     if pathlib.Path("dev-requirements.txt").exists():
         subprocess.run(
             [

@@ -4,6 +4,7 @@ pytest
 tox
 versioneer
 flake8
+flake8-commas
 pylint
 mypy
 black
