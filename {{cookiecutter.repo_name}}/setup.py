@@ -50,7 +50,7 @@ def read(*names, **kwargs):
 
 
 with open("requirements.in") as f:
-    INSTALL_REQUIRES = f.splitlines()
+    INSTALL_REQUIRES = f.read().splitlines()
 
 {% if cookiecutter.c_extension_support != 'no' -%}
 # Enable code coverage for C code: we can't use CFLAGS=-coverage in tox.ini, since that may mess with compiling
