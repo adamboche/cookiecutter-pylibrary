@@ -6,6 +6,6 @@ versioneer
 flake8
 flake8-commas
 pylint
-mypy
+# mypy
 black
 pex

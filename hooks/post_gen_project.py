@@ -109,6 +109,7 @@ if __name__ == "__main__":
     To get started run these:
 
         cd {{ cookiecutter.repo_name }}
+        ./pycli lock
         ./pycli init
         ./pycli lock
         git init
