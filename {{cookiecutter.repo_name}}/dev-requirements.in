@@ -9,3 +9,4 @@ pylint
 # mypy
 black
 pex
+bump2version
