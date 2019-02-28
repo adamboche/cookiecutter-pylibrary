@@ -8,3 +8,4 @@ flake8-commas
 pylint
 mypy
 black
+pex
