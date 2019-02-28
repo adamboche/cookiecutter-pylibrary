@@ -26,7 +26,7 @@ import sys
 
 @click.command()
 @click.argument('names', nargs=-1)
-def main(names):
+def cli(names):
     click.echo(repr(names))
 {%- elif cookiecutter.command_line_interface == 'argparse' %}
 
