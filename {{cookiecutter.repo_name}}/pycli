@@ -122,13 +122,18 @@ def bundle(cfg):
     """Bundle the package into a standalone unix executable."""
     if not pathlib.Path("requirements.txt").exists():
         raise FileNotFoundError("Run `lock` first to create requirements.txt.")
+
+    with open("requirements.txt") as f:
+        requirements = [line.split()[0] for line in f if line[0].isalpha()]
+
     subprocess.run(
         [
             cfg.venv_path / "bin/pex",
-            "-r",
-            "requirements.txt",
+            ".",
+            *requirements,
             "-m",
             "{{cookiecutter.package_name}}",
+            "-o" "{{cookiecutter.package_name}}.pex",
         ]
     )
 
