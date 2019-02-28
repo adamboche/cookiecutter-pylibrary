@@ -134,6 +134,7 @@ def bundle(cfg):
             "-m",
             "{{cookiecutter.package_name}}",
             "-o" "{{cookiecutter.package_name}}.pex",
+            "--disable-cache",
         ]
     )
 
