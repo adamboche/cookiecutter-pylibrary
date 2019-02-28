@@ -109,9 +109,9 @@ if __name__ == "__main__":
     To get started run these:
 
         cd {{ cookiecutter.repo_name }}
-        ./pycli lock
         ./pycli init
         ./pycli lock
+        ./pycli init
         git init
         git add --all
         git commit -m "Add initial project skeleton."
