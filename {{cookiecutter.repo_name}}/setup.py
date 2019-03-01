@@ -8,9 +8,7 @@ import io
 import os
 {% endif -%}
 import re
-{% if cookiecutter.c_extension_support == 'cffi' -%}
 import sys
-{% endif -%}
 from glob import glob
 from os.path import basename
 from os.path import dirname
@@ -48,9 +46,12 @@ def read(*names, **kwargs):
     ) as fh:
         return fh.read()
 
-
-with open("requirements.in") as f:
-    INSTALL_REQUIRES = f.read().splitlines()
+try:
+    with open("requirements.in") as f:
+        INSTALL_REQUIRES = f.read().splitlines()
+except FileNotFoundError:
+    print(sys.exc_info())
+    INSTALL_REQUIRES = []
 
 {% if cookiecutter.c_extension_support != 'no' -%}
 # Enable code coverage for C code: we can't use CFLAGS=-coverage in tox.ini, since that may mess with compiling
