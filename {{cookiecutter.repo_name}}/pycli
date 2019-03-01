@@ -137,15 +137,6 @@ def bundle(cfg):
     )
 
 
-@_register
-def update_pycli(cfg):
-    """Update this script to the latest github version."""
-    url = "https://gist.githubusercontent.com/energizerhub/3cbab5783d5e9eb93ee8e0c561f9f25e/raw/pycli"
-    with open(pathlib.Path(__file__), "wb") as current_script:
-        data = urllib.request.urlopen(url).read()
-        current_script.write(data)
-
-
 def _get_default_venv_path():
     """Get the default path of the venv."""
 
