@@ -23,11 +23,11 @@ import sys
 {%- endif %}
 {%- if cookiecutter.command_line_interface == 'click' %}
 
+from {{cookiecutter.package_name}} import app
 
 @click.command()
-@click.argument('names', nargs=-1)
-def cli(names):
-    click.echo(repr(names))
+def cli(**kwargs):
+    app.main(**kwargs)
 {%- elif cookiecutter.command_line_interface == 'argparse' %}
 
 parser = argparse.ArgumentParser(description='Command description.')
