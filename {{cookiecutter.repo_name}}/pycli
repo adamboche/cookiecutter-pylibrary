@@ -120,9 +120,7 @@ def upload(cfg):
 @_register
 def bundle(cfg):
     """Bundle the package into a standalone unix executable."""
-    if not pathlib.Path("requirements.txt").exists():
-        raise FileNotFoundError("Run `lock` first to create requirements.txt.")
-
+    lock(cfg)
     with open("requirements.txt") as f:
         requirements = [line.split()[0] for line in f if line[0].isalpha()]
 
