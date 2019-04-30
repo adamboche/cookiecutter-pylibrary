@@ -90,7 +90,6 @@ class optional_build_ext(build_ext):
 setup(
     name='{{ cookiecutter.distribution_name }}',
     version='{{ cookiecutter.version }}',
-    license='{{ cookiecutter.license }}',
     description={{ '{0!r}'.format(cookiecutter.project_short_description).lstrip('ub') }},
     long_description='%s\n%s' % (
         re.compile('^.. start-badges.*^.. end-badges', re.M | re.S).sub('', read('README.rst')),
@@ -116,6 +115,8 @@ setup(
         'License :: OSI Approved :: ISC License (ISCL)',
 {%- elif cookiecutter.license == "Apache Software License 2.0" %}
         'License :: OSI Approved :: Apache Software License',
+{%- elif cookiecutter.license == "GNU General Public License v3 (GPLv3)" %}
+        "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
 {%- endif %}
         'Operating System :: Unix',
         'Operating System :: POSIX',
