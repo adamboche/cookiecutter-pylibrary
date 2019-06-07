@@ -10,3 +10,4 @@ pylint
 black
 pex
 bump2version
+check-manifest
