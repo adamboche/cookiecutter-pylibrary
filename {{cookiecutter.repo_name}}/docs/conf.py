@@ -6,6 +6,8 @@ import os
 
 extensions = [
     'sphinx.ext.autodoc',
+    'sphinx.ext.napoleon',
+    'sphinx_autodoc_typehints',  # Must come *after* sphinx.ext.napoleon.
     'sphinx.ext.autosummary',
     'sphinx.ext.coverage',
     'sphinx.ext.doctest',
@@ -60,4 +62,6 @@ html_short_title = '%s-%s' % (project, version)
 
 napoleon_use_ivar = True
 napoleon_use_rtype = False
-napoleon_use_param = False
+napoleon_use_param = True
+
+autoapi_dirs = ['../src/{{cookiecutter.package_name}}']
