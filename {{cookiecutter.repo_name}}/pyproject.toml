@@ -2,7 +2,7 @@
 
 [tool.towncrier]
 
-   package = "{{cookicutter.package_name}}"
+   package = "{{cookiecutter.package_name}}"
    package_dir = "src"
    filename = "CHANGELOG.rst"
    template = "changelog.d/towncrier_template.rst"
