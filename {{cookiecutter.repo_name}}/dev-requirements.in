@@ -3,10 +3,13 @@ cuvner
 pytest
 tox
 versioneer
-flake8
-pylint
-# mypy
 black
+pylint
 pex
 bump2version
+docutils
 check-manifest
+readme-renderer
+pygments
+isort
+mypy
