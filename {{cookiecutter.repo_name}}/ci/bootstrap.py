@@ -62,10 +62,10 @@ if __name__ == "__main__":
 {% else %}
     tox_environments = [
         line.strip()
-        # WARNING: 'tox' must be installed globally or in the project's virtualenv
-        for line in subprocess.check_output(['tox', '--listenvs'], universal_newlines=True).splitlines()
+        # WARNING: "tox" must be installed globally or in the project"s virtualenv
+        for line in subprocess.check_output(["tox", "--listenvs"], universal_newlines=True).splitlines()
     ]
-    tox_environments = [line for line in tox_environments if line not in ['clean', 'report', 'docs', 'check']]
+    tox_environments = [line for line in tox_environments if line not in ["clean", "report", "docs", "check"]]
 {% endif %}
     for name in os.listdir(join("ci", "templates")):
         with open(join(base_path, name), "w") as fh:
