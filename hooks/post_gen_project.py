@@ -113,6 +113,7 @@ if __name__ == "__main__":
         ./pycli lock
         ./pycli init
         git init
+        pre-commit install --install-hooks
         git add --all
         git commit -m "Add initial project skeleton."
         git remote add origin git@github.com:{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}.git
