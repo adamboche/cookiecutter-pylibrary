@@ -113,11 +113,14 @@ if __name__ == "__main__":
         ./pycli lock
         ./pycli init
         git init
+        git add --all
+        git commit -m "Add initial project skeleton."
+
         pre-commit install --install-hooks
         git add --all
-        pre-commit run
+        pre-commit run --all-files
+        git commit -m"Apply pre-commit hooks."
 
-        git commit -m "Add initial project skeleton."
         git remote add origin git@github.com:{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}.git
         git push -u origin master
 
