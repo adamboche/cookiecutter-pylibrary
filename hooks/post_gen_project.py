@@ -117,8 +117,8 @@ if __name__ == "__main__":
         git commit -m "Add initial project skeleton."
 
         pre-commit install --install-hooks
-        git add --all
         pre-commit run --all-files
+        git add --all
         git commit -m"Apply pre-commit hooks."
 
         git remote add origin git@github.com:{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}.git
