@@ -18,3 +18,4 @@ towncrier
 py-find-injection
 twine
 docshtest
+pytest-cov
