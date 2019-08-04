@@ -35,8 +35,8 @@ repos:
       - id: check-executables-have-shebangs
       - id: mixed-line-ending
 
-- repo: https://github.com/Yelp/detect-secrets.git
-    rev: v0.12.4
-    hooks:
-    -   id: detect-secrets
-        args: ['--baseline', '.secrets.baseline']
+  - repo: https://github.com/Yelp/detect-secrets.git
+      rev: v0.12.4
+      hooks:
+      -   id: detect-secrets
+          args: ['--baseline', '.secrets.baseline']
