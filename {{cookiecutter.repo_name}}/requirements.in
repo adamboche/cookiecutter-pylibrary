@@ -1,6 +1,0 @@
-{%- if cookiecutter.command_line_interface == 'click' %}
-click
-{%- endif %}
-{%- if cookiecutter.c_extension_support == 'cffi' %}
-cffi
-{%- endif %}

@@ -109,10 +109,8 @@ if __name__ == "__main__":
     To get started run these:
 
         cd {{ cookiecutter.repo_name }}
-        ./pycli init
-        ./pycli lock
-        ./pycli init
-        venv/bin/detect-secrets scan > .secrets.baseline
+        poetry install
+        poetry run detect-secrets scan > .secrets.baseline
         git init
         git add --all
         git commit -m "Add initial project skeleton."
