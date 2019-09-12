@@ -26,27 +26,96 @@
         "2005-2018"
     ],
     "version": "0.1.0",
-    "license": ["BSD 2-Clause License", "BSD 3-Clause License", "MIT license", "ISC license", "Apache Software License 2.0", "GNU General Public License v3 (GPLv3)"],
-    "c_extension_support": ["no", "yes", "cffi", "cython"],
-    "c_extension_optional": ["no", "yes"],
+    "license": [
+        "MIT License",
+        "GNU General Public License v3 (GPLv3)",
+        "BSD 2-Clause License",
+        "BSD 3-Clause License",
+        "MIT license",
+        "ISC license",
+        "Apache Software License 2.0"
+    ],
+    "c_extension_support": [
+        "no",
+        "yes",
+        "cffi",
+        "cython"
+    ],
+    "c_extension_optional": [
+        "no",
+        "yes"
+    ],
     "c_extension_module": "_{{ cookiecutter.package_name }}",
     "c_extension_function": "longest",
-    "test_matrix_configurator": ["no", "yes"],
-    "test_matrix_separate_coverage": ["no", "yes"],
-    "test_runner": ["pytest", "nose"],
-    "linter": ["flake8", "pylama"],
-    "command_line_interface": ["click", "plain", "argparse", "no"],
+    "test_matrix_configurator": [
+        "no",
+        "yes"
+    ],
+    "test_matrix_separate_coverage": [
+        "no",
+        "yes"
+    ],
+    "test_runner": [
+        "pytest",
+        "nose"
+    ],
+    "linter": [
+        "flake8",
+        "pylama"
+    ],
+    "command_line_interface": [
+        "click",
+        "plain",
+        "argparse",
+        "no"
+    ],
     "command_line_interface_bin_name": "{{ cookiecutter.distribution_name }}",
-    "coveralls": ["no", "yes"],
-    "codecov": ["no", "yes"],
-    "landscape": ["no", "yes"],
-    "scrutinizer": ["no", "yes"],
-    "codacy" : ["no", "yes"],
-    "codeclimate" : ["no", "yes"],
-    "sphinx_docs": ["yes", "no"],
-    "sphinx_theme": ["sphinx-rtd-theme", "sphinx-py3doc-enhanced-theme"],
-    "sphinx_doctest": ["no", "yes"],
-    "travis": ["yes", "no"],
-    "appveyor": ["no", "yes"],
-    "requiresio": ["no", "yes"]
+    "coveralls": [
+        "no",
+        "yes"
+    ],
+    "codecov": [
+        "no",
+        "yes"
+    ],
+    "landscape": [
+        "no",
+        "yes"
+    ],
+    "scrutinizer": [
+        "no",
+        "yes"
+    ],
+    "codacy": [
+        "no",
+        "yes"
+    ],
+    "codeclimate": [
+        "no",
+        "yes"
+    ],
+    "sphinx_docs": [
+        "yes",
+        "no"
+    ],
+    "sphinx_theme": [
+        "sphinx-rtd-theme",
+        "sphinx-py3doc-enhanced-theme"
+    ],
+    "sphinx_doctest": [
+        "no",
+        "yes"
+    ],
+    "travis": [
+        "yes",
+        "no"
+    ],
+    "appveyor": [
+        "no",
+        "yes"
+    ],
+    "requiresio": [
+        "no",
+        "yes"
+    ]
 }
