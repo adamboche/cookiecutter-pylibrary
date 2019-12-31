@@ -6,13 +6,14 @@ env:
     - LD_PRELOAD=/lib/x86_64-linux-gnu/libSegFault.so
     - SEGFAULT_SIGNALS=all
   matrix:
+    - TOXENV=coverage
     - TOXENV=check
 {%- if cookiecutter.sphinx_docs == "yes" %}
-    - TOXENV=docs
+    - TOXENV=doc
 {%- endif %}
 matrix:
   include:
-{%- for env in ['py27', 'py34', 'py35', 'py36', 'py37', 'pypy', 'pypy3'] %}
+{%- for env in ['py36', 'py37', 'pypy3'] %}
     - python: '{{ env.split("-")[0] if env.startswith("pypy") else "{0[2]}.{0[3]}".format(env) }}'
 {%- if env.startswith('py37') %}
       dist: xenial
