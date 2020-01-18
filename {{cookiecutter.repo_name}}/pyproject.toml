@@ -6,7 +6,7 @@ authors = ["{{cookiecutter.full_name}} <{{cookiecutter.email}}>"]
 readme = "README.rst"
 
 [tool.poetry.dependencies]
-python = "^3.7"
+python = "^3.6"
 click = "*"
 attrs = "*"
 
@@ -16,9 +16,7 @@ bump2version = "^0.5.10"
 coverage = "^4.5"
 pytest = "^5.0"
 hypothesis = "^4.32"
-requests = "^2.22"
 pylint = "^2.3"
-aiohttp = "^3.5"
 twine = "^1.13"
 vulture = "^1.0"
 cuvner = "^18.0"
@@ -38,8 +36,6 @@ docs = [
     "sphinx-rtd-theme",
     "sphinx-autodoc-typehints",
     "sphinx-click",
-    "marshmallow-jsonschema",
-    "sphinx-jsonschema",
 
 ]
 
